@@ -50,8 +50,8 @@ public abstract class Concert {
         }
     }
 
-    public int incomeFromTickets() {
-        return ((this.ticketPrice * generatePeoples()) * 40) / 100;
+    public double incomeFromTickets() {
+        return ((this.ticketPrice * generatePeoples()) ) * 0.4;
     }
 
     public void itsCanceled() {
