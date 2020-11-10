@@ -5,9 +5,8 @@ import com.codecool.concert.concerts.Concert;
 import java.util.ArrayList;
 
 public class ConcertOrganizer {
-    protected int totalIncome;
-    protected int numberOfConcerts;
-    protected ArrayList<Concert> concertList;
+    private int totalIncome;
+    private ArrayList<Concert> concertList;
     protected ArrayList<Band> mainBandList;
     protected ArrayList<Band> warmUpBandList;
 
@@ -17,11 +16,11 @@ public class ConcertOrganizer {
         this.warmUpBandList = new ArrayList<>();
     }
 
-    public void addToList(Concert concert){
+    public void addToList(Concert concert) {
         concertList.add(concert);
     }
 
-    public void addIncome(int income){
+    public void addIncome(int income) {
         this.totalIncome += income;
     }
 
@@ -33,7 +32,4 @@ public class ConcertOrganizer {
         return totalIncome;
     }
 
-    public void setTotalIncome(int totalIncome) {
-        this.totalIncome = totalIncome;
-    }
 }

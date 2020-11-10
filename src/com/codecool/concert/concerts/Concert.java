@@ -41,6 +41,7 @@ public abstract class Concert {
         return ((this.length / 0.5) * this.beerPrice) * generatePeoples();
     }
 
+
     public int calculateIncome() {
         if (!this.canceled) {
             return (int) (moneyFromBeer() + incomeFromTickets());
