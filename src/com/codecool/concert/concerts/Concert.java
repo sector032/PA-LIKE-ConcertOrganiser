@@ -61,16 +61,28 @@ public abstract class Concert {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Concert{" +
-                "capacity=" + capacity +
-                ", length=" + length +
-                ", ticketPrice=" + ticketPrice +
-                ", beerPrice=" + beerPrice +
-                ", numberOfPeople = " + generatePeoples() +
-                ", canceled = " + canceled +
-                ", income = " + calculateIncome() +
-                '}';
+
+    public void Start() {
+        if(this.capacity == 0){
+            System.out.println("Canceled");
+        }else{
+            System.out.println("The concert was organized with the following attributes:");
+            System.out.println("Ticket Price: " + ticketPrice + " HUF");
+            System.out.println("Beer Price: " + beerPrice + " HUF");
+            System.out.println("Number of Visitors: " + generatePeoples());
+            System.out.println("**********************************");
+            System.out.println("Total Income: " + calculateIncome() + " HUF");
+            System.out.println("**********************************");
+
+        }
+
+//        return "Concert{" +
+//                "capacity=" + capacity +
+//                ", length=" + length +
+//                ", TicketPrice: " + ticketPrice + " HUF" +
+//                ", BeerPrice: " + beerPrice + " HUF" +
+//                ", NumberOfPeoples:  " + generatePeoples() +
+//                ", Concert Profit = " + calculateIncome() + " HUF" +
+//                '}';
     }
 }

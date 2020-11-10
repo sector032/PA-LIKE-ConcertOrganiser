@@ -28,9 +28,8 @@ public class Main {
         for (Concert concert : organizer.getConcertList()) {
             concert.itsCanceled();
             organizer.addIncome(concert.calculateIncome());
-            System.out.println(concert);
-
+            concert.Start();
         }
-        System.out.println(organizer.getTotalIncome() + " HUF");
+
     }
 }
